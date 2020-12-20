@@ -1,3 +1,7 @@
+*{
+    transition: .4s;
+}
+
 html, body {
     height: 100%;
   }
@@ -28,7 +32,7 @@ html, body {
 
 .text-hero {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight:bold;
@@ -37,7 +41,16 @@ html, body {
   
 .hero{ 
     height: 100%;
-    background-image: url('../asset/background-1.png');
+    background-image: url('../img/background-1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+.hero-tentang{ 
+    height: 100%;
+    background-image: url('../img/background-3.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -79,7 +92,7 @@ html, body {
 }
 
 .content-2{
-    background-image: url('../asset/background-2.png');
+    background-image: url('../img/background-2.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -107,4 +120,20 @@ html, body {
 .footer hr{
     background-color: #48586d;
     height: 2px;
+}
+
+.list-active{
+    border-left: 4px solid #026E3A !important;
+    background-color: #026e3a1c;
+}
+
+.list li{
+    border-radius: 0 !important;
+    cursor: pointer;
+}
+
+.list li:hover{
+    background-color: #026e3a1c;
+    border-left: 4px solid #026E3A !important;
+
 }
