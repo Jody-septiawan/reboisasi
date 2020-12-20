@@ -62,6 +62,12 @@ html, body {
     background-color: #026E3A;
     color: aliceblue;
     border-radius: 2em;
+    border: 3px solid #026E3A;
+
+}
+.btn-pelajari:hover{
+    border: 3px solid #026E3A;
+    background-color: #ffffff;
 }
 
 .responsive-iframe {
