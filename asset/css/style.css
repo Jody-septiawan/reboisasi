@@ -58,6 +58,16 @@ html, body {
     width: 100%;
   }
 
+  .hero-login{ 
+    height: 100%;
+    background-image: url('../img/background-4.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+
 .btn-mulai-aksi{
     color: aliceblue;
     border: 3px solid white;
@@ -136,4 +146,92 @@ html, body {
     background-color: #026e3a1c;
     border-left: 4px solid #026E3A !important;
 
+}
+
+.btn-to-daftar{
+    color: white;
+    border: 2px solid white;
+    border-radius: 2em;
+}
+
+.btn-to-daftar:hover{
+    color: white;
+    border: 2px solid white;
+    border-radius: 2em;
+    background-color: #026E3A;
+}
+
+.form-input input{
+    padding-left: 40px;
+   background-color: rgb(23,115,81,.55);
+   color: white;
+   margin: 10px 0;
+}
+
+.form-input input:focus{
+    padding-left: 40px;
+   background-color: rgb(23,115,81,.55);
+   color: white;
+   border: none;
+}
+
+.form-input input::placeholder {
+   color: white;
+
+}
+
+.form-input{
+    position: relative;
+}
+
+.form-input i{
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    padding: 9px 8px;
+    color: white;
+}
+
+.form-input-regis input{
+    padding-left: 40px;
+   background-color: rgba(255, 255, 255, 0.55);
+   color: rgb(0, 0, 0);
+   margin: 10px 0;
+}
+
+.form-input-regis input:focus{
+    padding-left: 40px;
+   background-color: rgb(23,115,81,.55);
+   color: white;
+   border: none;
+}
+
+.form-input-regis input::placeholder {
+   color: #026E3A;
+
+}
+
+.form-input-regis{
+    position: relative;
+}
+
+.form-input-regis i{
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    padding: 9px 8px;
+    color: #026E3A;
+}
+
+.btn-login{
+    color: #026E3A;
+    border: 2px solid #026E3A;
+    border-radius: 2em;
+}
+
+.btn-login:hover{
+    color: white;
+    border: 2px solid #026E3A;
+    border-radius: 2em;
+    background-color: #026E3A;
 }
