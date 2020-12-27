@@ -49,9 +49,24 @@
                     <li class="nav-item active">
                         <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.html"><img src="asset/img/login.png" class="img-fluid"
-                                alt=""></span></a>
+                    <li class="nav-item active divider">
+                        <span class="nav-divider"></span>
+                    </li>
+                    <li class="nav-item active ">
+
+                        <a class="nav-link" href="login.html" id="to-login-page"><img src="asset/img/login.png"
+                                class="img-fluid" alt=""></span></a>
+
+                        <div class="dropdown">
+                            <a class="btn-user nav-link dropdown-toggle" href="#" role="button" id="user"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" id="logout" href="/">Logout</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -66,7 +81,7 @@
                 <br>
                 bersama LindungiHutan
             </div><br>
-            <button type="button" class="btn btn-mulai-aksi px-5 mt-3">Mulai
+            <button type="button" id="mulai" class="btn btn-mulai-aksi px-5 mt-3">Mulai
                 Aksi</button>
         </div>
 
@@ -97,14 +112,20 @@
                         Lorem ipsum dolor sit amet.
                     </p>
                     <div data-aos="fade-right" data-aos-delay="500">
-                        <button class="btn btn-pelajari px-4 poppins">Pelajari lebih</button>
+                        <button class="btn btn-pelajari px-4 poppins" id="more-learn">Pelajari lebih</button>
                     </div>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
-                    <iframe data-aos="fade-left" data-aos-delay="500" class="responsive-iframe"
+                    <!-- <iframe data-aos="fade-left" data-aos-delay="500" class="responsive-iframe"
                         src="https://www.youtube.com/embed/oSmUI3m2kLk" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe> -->
+                    <iframe data-aos="fade-left" data-aos-delay="500" class="responsive-iframe"
+                        src="https://www.youtube.com/embed/CVHj7Wxhvdo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+                    <!-- <iframe data-aos="fade-left" data-aos-delay="500" class="responsive-iframe"
+                        src="https://drive.google.com/file/d/1dD1GA1erfq8dV414R9a_zdi__H53tGF-/preview"></iframe> -->
                 </div>
             </div>
         </div>
@@ -577,8 +598,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -587,8 +608,38 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         AOS.init();
+
+        console.log(sessionStorage.getItem("email"));
+        if (sessionStorage.getItem("email")) {
+            email = sessionStorage.getItem("email")
+            $('#to-login-page').hide();
+            $('#user').show();
+            $("#user").html("<img src='asset/img/fp-user.png' class='img-fluid' alt=''> Hay, " + email);
+        } else {
+            $('#to-login-page').show();
+            $('#user').hide();
+            $('.divider').hide();
+        }
+
+        $('#logout').on('click', function () {
+            sessionStorage.clear();
+        });
+
+        $("#mulai").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".content-1").offset().top
+            }, 2000);
+        });
+
+        $("#more-learn").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".content-2").offset().top
+            }, 2000);
+        });
+
     </script>
 </body>
 

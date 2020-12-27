@@ -235,3 +235,41 @@ html, body {
     border-radius: 2em;
     background-color: #026E3A;
 }
+
+.nav-divider{
+    width: 1px;
+    height: calc(100% - 8px);
+    display: inline-block;
+    margin: 4px 1.25rem;
+    background-color: #eeecff;
+}
+
+.bg-hijau-tua{
+    background-color: #1b81504b;
+    border-radius: 10px;
+}
+.bg-hijau-tua:focus{
+    border: none !important;
+}
+
+.bg-hijau-tua:hover{
+    background-color: #026e3acb;
+    border-radius: 10px;
+}
+
+.btn-user{
+    border: none;
+    background-color: #1b815000;
+    color: white !important;
+    border-radius: 10px;
+
+}
+
+.btn-user:active{
+    border: none !important;
+}
+
+.btn-user:hover{
+    background-color: #003a1ecb;
+    border-radius: 10px;
+}

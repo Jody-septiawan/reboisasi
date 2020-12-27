@@ -29,7 +29,7 @@
 
 <body>
 
-    <div class="navbar navbar-expand-lg navbar-dark bg-hijau-navbar poppins fixed-top " style="width: 100%;"
+    <div class="navbar navbar-expand-lg navbar-dark bg-hijau-navbar poppins fixed-top" style="width: 100%;"
         data-aos="fade-bottom" data-aos-delay="400">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="asset/img/icon.png" class="img-fluid" alt="">
@@ -49,21 +49,37 @@
                     <li class="nav-item active">
                         <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.html"><img src="asset/img/login.png" class="img-fluid"
-                                alt=""></span></a>
+                    <li class="nav-item active divider">
+                        <span class="nav-divider"></span>
+                    </li>
+                    <li class="nav-item active ">
+
+                        <a class="nav-link" href="login.html" id="to-login-page"><img src="asset/img/login.png"
+                                class="img-fluid" alt=""></span></a>
+
+                        <div class="dropdown">
+                            <a class="btn-user nav-link dropdown-toggle" href="#" role="button" id="user"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" id="logout" href="/">Logout</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
+
     </div>
 
     <div class="hero-tentang">
         <div class="text-hero h1 text-light poppins text-center">
             <div data-aos="flip-up" data-aos-delay="300"> Kisah Tentang Kami, <br> bisa menjadi Kisah Kita
             </div><br>
-            <button type="button" class="btn btn-mulai-aksi px-5 mt-3">
-                Bergabung
+            <button type="button" id="more-learn" class="btn btn-mulai-aksi px-5 mt-3">
+                History
             </button>
         </div>
     </div>
@@ -244,8 +260,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -304,7 +320,29 @@
             $('#content-program').addClass('d-none');
             $('#content-faq').removeClass('d-none');
         });
+        console.log(sessionStorage.getItem("email"));
 
+        $("#more-learn").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".tentang").offset().top
+            }, 2000);
+        });
+
+        console.log(sessionStorage.getItem("email"));
+        if (sessionStorage.getItem("email")) {
+            email = sessionStorage.getItem("email")
+            $('#to-login-page').hide();
+            $('#user').show();
+            $("#user").html("<img src='asset/img/fp-user.png' class='img-fluid' alt=''> Hay, " + email);
+        } else {
+            $('#to-login-page').show();
+            $('#user').hide();
+            $('.divider').hide();
+        }
+
+        $('#logout').on('click', function () {
+            sessionStorage.clear();
+        });
     </script>
 </body>
 

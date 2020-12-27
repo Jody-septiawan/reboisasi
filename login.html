@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="asset/css/style.css">
@@ -22,8 +23,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script
-        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <script type="text/javascript">
+        window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
 </head>
 
 <body>
@@ -87,17 +89,17 @@
                                 Mari mulai beraksi untuk hutan kita
                             </div>
                             <div class="form-input">
-                                <input type="email" class="form-control" name="" id="" aria-describedby="helpId"
-                                    placeholder="Email">
+                                <input type="email" class="form-control enter" name="" id="email-login"
+                                    aria-describedby="helpId" placeholder="Email">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
                             <div class="form-input">
-                                <input type="password" class="form-control" name="" id="" aria-describedby="helpId"
-                                    placeholder="Password">
+                                <input type="password" class="form-control enter" name="" id="password-login"
+                                    aria-describedby="helpId" placeholder="Password">
                                 <i class="fa fa-lock" aria-hidden="true"></i>
                             </div>
                             <div class="text-center mt-5">
-                                <button class="btn btn-login px-4 py-0">Masuk</button>
+                                <button class="btn btn-login px-4 py-0" id="masuk">Masuk</button>
                             </div>
                         </div>
                     </div>
@@ -162,8 +164,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -184,6 +186,64 @@
             $('.kartu-regis').removeClass('d-none');
             $('.kartu-login').addClass('d-none');
         });
+
+        $('#masuk').on('click', function () {
+            email = $('#email-login').val()
+            password = $('#password-login').val()
+            console.log(email);
+            if (email !== "" & password !== "") {
+
+                if (typeof (Storage) !== "undefined") {
+                    // Store
+                    sessionStorage.setItem("email", email);
+                    // Retrieve
+                    console.log(sessionStorage.getItem("email"));
+
+                    window.location.href = "/";
+                } else {
+                    console.log("Sorry, your browser does not support Web Storage...");
+                }
+            } else {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Email & Password harus diisi',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        });
+
+        $('.enter').keypress(function (e) {
+            var key = e.which;
+            if (key == 13)  // the enter key code
+            {
+                email = $('#email-login').val()
+                password = $('#password-login').val()
+                console.log(email);
+                if (email !== "" & password !== "") {
+
+                    if (typeof (Storage) !== "undefined") {
+                        // Store
+                        sessionStorage.setItem("email", email);
+                        // Retrieve
+                        console.log(sessionStorage.getItem("email"));
+
+                        window.location.href = "/";
+                    } else {
+                        console.log("Sorry, your browser does not support Web Storage...");
+                    }
+                } else {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Email & Password harus diisi',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+
+            }
+        });
+
     </script>
 </body>
 
