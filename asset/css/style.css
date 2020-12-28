@@ -404,3 +404,6 @@ html, body {
     background-color: #026e3ac7 !important;
     border: none;
 }
+.dropdown-menu a{
+   color: white;
+}
