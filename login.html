@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Lindungi Hutan</title>
+    <title>Login - Lindungi Hutan</title>
     <link rel="icon" href="asset/img/icon.png" type="image/gif" sizes="16x16">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,7 +30,6 @@
 
 <body>
 
-
     <div class="navbar navbar-expand-lg navbar-dark bg-hijau-navbar poppins fixed-top" style="width: 100%;"
         data-aos="fade-bottom" data-aos-delay="400">
         <div class="container">
@@ -42,23 +41,37 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link mx-3" href="#">Proyek</span></a>
+                    <li class="nav-item active mt-1">
+                        <a class="nav-link mx-3" href="kampanye.html">Kampanye</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active mt-1">
                         <a class="nav-link mx-3" href="#">Partner</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item active mt-1">
                         <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.html"><img src="asset/img/login.png" class="img-fluid"
-                                alt=""></span></a>
+                    <li class="nav-item active divider">
+                        <span class="nav-divider"></span>
+                    </li>
+                    <li class="nav-item active ">
+
+                        <a class="nav-link" href="login.html" id="to-login-page"><img src="asset/img/login.png"
+                                class="img-fluid" alt=""></span></a>
+
+                        <div class="dropdown">
+                            <a class="btn-user nav-link dropdown-toggle" href="#" role="button" id="user"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" id="logout" href="/">Logout</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
-
     </div>
 
     <div class="hero-login">
@@ -243,6 +256,32 @@
 
             }
         });
+
+        if (sessionStorage.getItem("email")) {
+            email = sessionStorage.getItem("email")
+            $('#to-login-page').hide();
+            $('#user').show();
+            $("#user").html("<img src='asset/img/fp-user.png' class='img-fluid' alt=''> Hay, " + email);
+        } else {
+            $('#to-login-page').show();
+            $('#user').hide();
+            $('.divider').hide();
+        }
+
+        $('#logout').on('click', function () {
+            sessionStorage.clear();
+        });
+
+        kampanye_login = sessionStorage.getItem('kampanye-login');
+        if (kampanye_login == 1) {
+            Swal.fire({
+                icon: 'warning',
+                html: "Silahkan login terlebih dahulu",
+                showConfirmButton: false,
+                timer: 2000
+            })
+            sessionStorage.setItem("kampanye-login", 0);
+        }
 
     </script>
 </body>

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Kampanye - Lindungi Hutan</title>
+    <link rel="icon" href="asset/img/icon.png" type="image/gif" sizes="16x16">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    </script>
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-hijau-navbar poppins fixed-top" style="width: 100%;"
+        data-aos="fade-bottom" data-aos-delay="400">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="asset/img/icon.png" class="img-fluid" alt="">
+                LindungiHutan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mt-1">
+                        <a class="nav-link mx-3" href="kampanye.html">Kampanye</span></a>
+                    </li>
+                    <li class="nav-item active mt-1">
+                        <a class="nav-link mx-3" href="#">Partner</span></a>
+                    </li>
+                    <li class="nav-item active mt-1">
+                        <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
+                    </li>
+                    <li class="nav-item active divider">
+                        <span class="nav-divider"></span>
+                    </li>
+                    <li class="nav-item active ">
+
+                        <a class="nav-link" href="login.html" id="to-login-page"><img src="asset/img/login.png"
+                                class="img-fluid" alt=""></span></a>
+
+                        <div class="dropdown">
+                            <a class="btn-user nav-link dropdown-toggle" href="#" role="button" id="user"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" id="logout" href="/">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-kampanye">
+        <div class="text-hero h1 text-light poppins text-center">
+            <div data-aos="flip-up" data-aos-delay="300">
+                Suarakan suaramu <br>
+                Nyatakan aksi mu untuk LindungiHutan
+            </div><br>
+            <button type="button" id="create-kampanye" class="btn btn-mulai-aksi px-5 mt-3" data-toggle="modal"
+                data-target="#buat-kampanye">
+                Buat Kampanye
+            </button>
+        </div>
+    </div>
+
+    <div class="kampanye py-5 poppins">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="kartu-kampanye border shadow" style="border-radius: .4em;">
+                        <div class="container-fluid">
+                            <div class="row py-4">
+                                <div class="col-7">
+                                    <div class="h2 mb-0" style="font-weight: 700;">PEDULI HUTAN</div>
+                                    <small>Compaigner : Ilham Fathullah</small>
+                                    <p class="mt-3 text-justify" style="font-size: 13px;">
+                                        MASYARAKAT yang tinggal di kawasan hutan harus siap dengan segala risikonya.
+                                        Tapi itu semua dapat dicegah agar hutan tetap aman dan manusia tidak merusak
+                                        lingkungan.
+                                        Tapi sayangnya, ada saja beberapa manusia yang berniat merusak lahan hutan, demi
+                                        keuntungan pribadi. Termasuk kesengajaan penggundulan hutan dan bentuk kerusakan
+                                        hutan yang lain.
+                                        Karenanya, LindungiHutan mengajak masyarakat yang tinggal area hutan dapat
+                                        meningkatkan kemampuan dan kemandiran desa. Terutama dalam melaksanakan rencana
+                                        pembangunan dan mengelola sumber daya alam, termasuk upaya pengurangan emisi gas
+                                        rumah kaca.
+                                        Salah satunya di Berau, Kalimantan, warga diajak untuk peduli hutan. Lewat
+                                        pendekatan Aksi Inspiratif Warga Untuk Perubahan (SIGAP), warga yang tinggal di
+                                        99 kampung terlihat.
+                                        Program ini digagas untuk menurunkan gas rumah kaca, melalui upaya mengurangi
+                                        laju penggundulan dan kerusakan hutan. Mereka juga menggagas inisiatif REDD+
+                                        (Reducing Emissions from Deforestation and Forest Degradation Plus), terutama
+                                        dalam pengendalian perubahan iklim global.
+                                    </p>
+                                    <button>Donasi</button>
+                                </div>
+                                <div class="col-5">
+                                    <img src="asset/img/img-1.png" class="img-fluid" alt="">
+                                    <div class="progress mt-3" style="background-color: rgb(207, 207, 207);">
+                                        <div class="progress-bar bg-hijau" role="progressbar" style="width: 62%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="container-fluid px-0">
+                                        <div class="row">
+                                            <div class="col-6"><small> 62 Pohon terkumpul </small></div>
+                                            <div class="col-6 text-right"><small>2 Hari lagi</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="kartu-kampanye border shadow" style="border-radius: .4em;">
+                        <div class="container-fluid">
+                            <div class="row py-4">
+                                <div class="col-7">
+                                    <div class="h2 mb-0" style="font-weight: 700;">BIBIT TANAMAN</div>
+                                    <small>Compaigner : Ilham Fathullah</small>
+                                    <p class="mt-3 text-justify" style="font-size: 13px;">
+                                        Perbenihan tanaman kehutanan merupakan segala sesuatu yang berkaitan dengan
+                                        pembangunan sumberdaya genetik, pemuliaan tanaman hutan, pengadaan dan
+                                        pengedaran benih dan bibit, dan sertifikasi. Pengertian ini sesuai dengan
+                                        Peraturan Menteri Kehutanan Nomor 1 Tahun 2009 tentang Penyelenggaraan
+                                        Perbenihan Tanaman Kehutanan. Penyelenggaraan perbenihan tanaman kehutanan
+                                        bertujuan menjamin kelestarian sumberdaya genetik tanaman hutan dan
+                                        pemanfaatannya, serta menjamin tersedianya benih dan/atau bibit tanaman hutan
+                                        dengan mutu yang baik. Pengertian benih tanaman hutan adalah bahan tanaman yang
+                                        berupa bahan generatif (biji) atau bahan vegetatif yang digunakan untuk
+                                        mengembangbiakkan tanaman hutan. Sedangkan bibit tanaman hutan adalah tumbuhan
+                                        muda hasil pengembangbiakan secara generatif atau secara vegetatif.
+                                        Penyelenggaraan perbenihan tanaman kehutanan yang dilaksanakan oleh Balai
+                                        Perbenihan Kehutanan diharapkan mampu menjamin kelestarian sumberdaya genetik
+                                        tanaman hutan dan pemanfaatannya, serta menjamin tersedianya benih dan/atau
+                                        bibit tanaman hutan dengan mutu yang baik..
+
+                                    </p>
+                                    <button>Donasi</button>
+                                </div>
+                                <div class="col-5">
+                                    <img src="asset/img/img-2.png" class="img-fluid" alt="">
+                                    <div class="progress mt-3" style="background-color: rgb(207, 207, 207);">
+                                        <div class="progress-bar bg-hijau" role="progressbar" style="width: 62%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="container-fluid px-0">
+                                        <div class="row">
+                                            <div class="col-6"><small> 62 Pohon terkumpul </small></div>
+                                            <div class="col-6 text-right"><small>2 Hari lagi</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 my-3" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="kartu-kampanye border shadow" style="border-radius: .4em;">
+                        <div class="container-fluid">
+                            <div class="row py-4">
+                                <div class="col-7">
+                                    <div class="h2 mb-0" style="font-weight: 700;">POHON UNTUK KOTA</div>
+                                    <small>Compaigner : Ilham Fathullah</small>
+                                    <p class="mt-3 text-justify" style="font-size: 13px;">
+                                        MASYARAKAT yang tinggal di kawasan hutan harus siap dengan segala risikonya.
+                                        Tapi itu semua dapat dicegah agar hutan tetap aman dan manusia tidak merusak
+                                        lingkungan.
+                                        Tapi sayangnya, ada saja beberapa manusia yang berniat merusak lahan hutan, demi
+                                        keuntungan pribadi. Termasuk kesengajaan penggundulan hutan dan bentuk kerusakan
+                                        hutan yang lain.
+                                        Karenanya, LindungiHutan mengajak masyarakat yang tinggal area hutan dapat
+                                        meningkatkan kemampuan dan kemandiran desa. Terutama dalam melaksanakan rencana
+                                        pembangunan dan mengelola sumber daya alam, termasuk upaya pengurangan emisi gas
+                                        rumah kaca.
+                                        Salah satunya di Berau, Kalimantan, warga diajak untuk peduli hutan. Lewat
+                                        pendekatan Aksi Inspiratif Warga Untuk Perubahan (SIGAP), warga yang tinggal di
+                                        99 kampung terlihat.
+                                        Program ini digagas untuk menurunkan gas rumah kaca, melalui upaya mengurangi
+                                        laju penggundulan dan kerusakan hutan. Mereka juga menggagas inisiatif REDD+
+                                        (Reducing Emissions from Deforestation and Forest Degradation Plus), terutama
+                                        dalam pengendalian perubahan iklim global.
+                                    </p>
+                                    <button>Donasi</button>
+                                </div>
+                                <div class="col-5">
+                                    <img src="asset/img/img-3.png" class="img-fluid" alt="">
+                                    <div class="progress mt-3" style="background-color: rgb(207, 207, 207);">
+                                        <div class="progress-bar bg-hijau" role="progressbar" style="width: 62%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="container-fluid px-0">
+                                        <div class="row">
+                                            <div class="col-6"><small> 62 Pohon terkumpul </small></div>
+                                            <div class="col-6 text-right"><small>2 Hari lagi</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bg-dark py-5">
+        <div class="container poppins" data-aos="fade-up" data-aos-delay="200">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="h5 text-orange mb-3" style="font-weight: bold;">LindungiHutan</div>
+                    <p class="text-light text-justify" style="font-weight: 300;">
+                        Website Penggalangan Dana Online untuk Konservasi Hutan dan Lingkungan. <br>
+                        Melindungi, menjaga, merawat, dan melestarikan ekosistem hutan itu berat, tidak bisa kami
+                        sendiri. Kami butuh Anda untuk bergabung bersama kami.
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <div class="h5 text-orange mb-3" style="font-weight: bold;">Menu Utama</div>
+                    <ul style="list-style-type: none;" class="text-light pl-3">
+                        <li><a href="kampanye.html">Kampanye</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="h5 text-orange mb-3" style="font-weight: bold;">Kontak Kami</div>
+                    <div class=" text-light pl-3">
+                        <table>
+                            <tr>
+                                <td class="align-top">
+                                    <i class="fa fa-phone fa-1x" aria-hidden="true"></i>
+                                </td>
+                                <td class="pl-3">+62 82306069611</td>
+                            </tr>
+                            <tr>
+                                <td class="align-top">
+                                    <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+                                </td>
+                                <td class="pl-3"><a target="_blank" href="mailto:info@lindungihutan.com"
+                                        class="text-light">info@lindungihutan.com</a></td>
+                            </tr>
+                            <tr>
+                                <td class="align-top"><i class="fa fa-home fa-1x" aria-hidden="true"></i>
+                                </td>
+                                <td class="pl-3"><a target="_blank" href="https://goo.gl/maps/PbjKvKfDVaudRaGe7"
+                                        class="text-light"> Jl.
+                                        SK RD Syahbuddin, Mayang
+                                        Mangurai,Kota Jambi, Jambi</a>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td></td>
+                                <td>
+                                    <iframe class="border" style="border-radius: .4em; width: 100%;"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.1846280826994!2d103.57505511541214!3d-1.6396872365778339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2587c54139a8f9%3A0x18e96bac3d1ce7b1!2sJambi%2C%20Mayang%20Mangurai%2C%20Kota%20Baru%2C%20Jambi%20City%2C%20Jambi%2036361!5e0!3m2!1sen!2sid!4v1608459773597!5m2!1sen!2sid"
+                                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                                        aria-hidden="false" tabindex="0"></iframe>
+                                </td>
+                            </tr> -->
+                        </table>
+
+                    </div>
+                </div>
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-12 text-center">
+                    <small class="text-light ">Copyright 2020 LindungiHutan - All Right’s Reserved</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="popup-modal">
+        <div class="modal fade kampanye-modal poppins" id="buat-kampanye" tabindex="-1" role="dialog"
+            aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                        <!-- <h5 class="modal-title">Modal title</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times-circle-o text-hijau-2" aria-hidden="true"></i>
+                            <!-- <span aria-hidden="true">&times;</span> -->
+                        </button>
+                    </div>
+                    <form action="kampanye.html">
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="form-input">
+                                            <input type="text" class="form-control enter" name="" id="nama"
+                                                aria-describedby="helpId" placeholder="Nama Kampanye" required>
+                                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="text" class="form-control enter" name="" id="penyelenggara"
+                                                aria-describedby="helpId" placeholder="Penyelenggara" required>
+                                            <i class="fa fa-users" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="form-group">
+                                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                                            <textarea placeholder="Ceritakan Kampanyemu" class="form-control" name=""
+                                                id="cerita" rows="6" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-input">
+                                            <input type="number" class="form-control enter" name="" id="harga"
+                                                aria-describedby="helpId" placeholder="Harga perpohon" required>
+                                            <i class="fa fa-usd" aria-hidden="true"></i>
+                                        </div>
+                                        <img src="#" style="width: 100%; height: 160px; border-radius: .5em;"
+                                            class="mb-2 border-0 bg-hijau-2 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                            alt="" id="blah">
+                                        <div class="input-group mb-3 ">
+                                            <div class="custom-file ">
+                                                <input type="file" class="custom-file-input" id="imgInp"
+                                                    aria-describedby="inputGroupFileAddon01" required>
+                                                <label class="custom-file-label bg-hijau-2 text-light"
+                                                    for="imgInp">Choose
+                                                    file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0 pt-0 pb-4 text-center">
+                            <button type="submit" class="btn-sebarkan mx-auto" id="btn-sebar">Sebarkan kampanye</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        $('#sejarah').on('click', function () {
+            $('#sejarah').addClass('list-active');
+            $('#visi-misi').removeClass('list-active');
+            $('#program').removeClass('list-active');
+            $('#faq').removeClass('list-active');
+
+            $('#content-sejarah').removeClass('d-none');
+            $('#content-visi-misi').addClass('d-none');
+            $('#content-program').addClass('d-none');
+            $('#content-faq').addClass('d-none');
+        });
+
+        $("#more-learn").click(function () {
+            $('html, body').animate({
+                scrollTop: $(".tentang").offset().top
+            }, 2000);
+        });
+
+        if (sessionStorage.getItem("email")) {
+            email = sessionStorage.getItem("email")
+            $('#to-login-page').hide();
+            $('#user').show();
+            $("#user").html("<img src='asset/img/fp-user.png' class='img-fluid' alt=''> Hay, " + email);
+        } else {
+            $('#to-login-page').show();
+            $('#user').hide();
+            $('.divider').hide();
+        }
+
+        $('#logout').on('click', function () {
+            sessionStorage.clear();
+        });
+
+        //preview
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            } else {
+            }
+        }
+
+        $("#imgInp").change(function () {
+            readURL(this);
+        });
+        $('#btn-sebar').on('click', function () {
+
+            nama = $('#nama').val();
+            penyelenggara = $('#penyelenggara').val();
+            cerita = $('#cerita').val();
+            harga = $('#harga').val();
+            imgInp = $('#imgInp').val();
+
+            //console.log(nama)
+            //console.log(penyelenggara)
+            //console.log(cerita)
+            //console.log(harga)
+            //console.log(imgInp)
+
+            if (nama !== "" & penyelenggara !== "" & cerita !== "" & harga !== "" & imgInp !== "") {
+                sessionStorage.setItem("kampanye", 1);
+            }
+        });
+
+        kampanye = sessionStorage.getItem('kampanye');
+        if (kampanye == 1) {
+            Swal.fire({
+                icon: 'success',
+                title: 'berhasil membuat Kampanye',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            sessionStorage.setItem("kampanye", 0);
+        }
+
+        $('#create-kampanye').on('click', function () {
+            if (!sessionStorage.getItem("email")) {
+                sessionStorage.setItem("kampanye-login", 1);
+                window.location.href = "login.html";
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

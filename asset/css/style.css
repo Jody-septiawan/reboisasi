@@ -10,6 +10,13 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
+.text-hijau-2{
+    color: #034827 !important;
+}
+.bg-hijau-2{
+    background-color: #034827 !important;
+}
+
 .bg-hijau{
     background-color:#026E3A !important;
 }
@@ -61,6 +68,16 @@ html, body {
   .hero-login{ 
     height: 100%;
     background-image: url('../img/background-4.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .hero-kampanye{ 
+    height: 100%;
+    background-image: url('../img/background-5.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -161,30 +178,30 @@ html, body {
     background-color: #026E3A;
 }
 
-.form-input input{
+.hero-login .form-input input{
     padding-left: 40px;
    background-color: rgb(23,115,81,.55);
    color: white;
    margin: 10px 0;
 }
 
-.form-input input:focus{
+.hero-login .form-input input:focus{
     padding-left: 40px;
    background-color: rgb(23,115,81,.55);
    color: white;
    border: none;
 }
 
-.form-input input::placeholder {
+.hero-login .form-input input::placeholder {
    color: white;
 
 }
 
-.form-input{
+.hero-login .form-input{
     position: relative;
 }
 
-.form-input i{
+.hero-login .form-input i{
     position: absolute;
     left: 4px;
     top: 0px;
@@ -270,6 +287,110 @@ html, body {
 }
 
 .btn-user:hover{
-    background-color: #003a1ecb;
+    background-color: #003a1e3b;
     border-radius: 10px;
+}
+
+.kampanye img{
+    border-radius: 0;
+}
+
+.kampanye button{
+    background-color: white;
+    border: 3px solid #026E3A;
+    border-radius: 2em;
+    color: #026E3A;
+    padding: 3px 30px;
+}
+
+.kampanye button:hover{
+    background-color: #026E3A;
+    border: 3px solid #026E3A;
+    border-radius: 2em;
+    color: #FFFFFF;
+    padding: 3px 30px;
+}
+.kampanye button:focus{
+    border: none !important;
+}
+
+
+.kampanye-modal .form-input input{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   margin: 10px 0;
+}
+
+.kampanye-modal .form-input input:focus{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+}
+
+.kampanye-modal .form-input input::placeholder {
+   color: white;
+
+}
+
+.kampanye-modal .form-input{
+    position: relative;
+}
+
+.kampanye-modal .form-input i{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    padding: 9px 8px;
+    color: white;
+}
+
+/* textarea */
+
+.kampanye-modal .form-group textarea{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   margin: 10px 0;
+}
+
+.kampanye-modal .form-group textarea:focus{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+}
+
+.kampanye-modal .form-group textarea::placeholder {
+   color: white;
+
+}
+
+.kampanye-modal .form-group{
+    position: relative;
+}
+
+.kampanye-modal .form-group i{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    padding: 9px 8px;
+    color: white;
+}
+
+.kampanye-modal .btn-sebarkan{
+    background-color: white;
+    border: 3px solid #026E3A;
+    border-radius: 2em;
+    color: #026E3A;
+    padding: 3px 30px;
+}
+
+.kampanye-modal .btn-sebarkan:hover{
+    background-color: #026E3A;
+    border: 3px solid #026E3A;
+    border-radius: 2em;
+    color: #FFFFFF;
+    padding: 3px 30px;
 }
