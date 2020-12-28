@@ -394,3 +394,13 @@ html, body {
     color: #FFFFFF;
     padding: 3px 30px;
 }
+
+.dropdown-menu{
+    margin-top: 10px;
+    background-color: #026e3ac7 !important;
+    border: none;
+}
+.dropdown-menu a:hover{
+    background-color: #026e3ac7 !important;
+    border: none;
+}
