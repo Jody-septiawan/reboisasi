@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tentang - Lindungi Hutan</title>
+    <title>Tentang kami - Reboisasi</title>
     <link rel="icon" href="asset/img/icon.png" type="image/gif" sizes="16x16">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,8 +22,21 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
-        window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+    <script>
+
+        function toggleFAQ(nomor) {
+            $("#content-faq-" + nomor).toggle(600, "swing");
+            console.log(nomor);
+            $("#down-" + nomor).toggleClass('d-none');
+            $("#up-" + nomor).toggleClass('d-none');
+            for (i = 1; i <= 9; i++) {
+                if (i != nomor) {
+                    $("#content-faq-" + i).hide(500, "linear");
+                }
+            }
+        }
     </script>
 </head>
 
@@ -33,7 +46,7 @@
         data-aos="fade-bottom" data-aos-delay="400">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="asset/img/icon.png" class="img-fluid" alt="">
-                LindungiHutan</a>
+                Reboisasi</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -97,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-8" data-aos="fade-up" data-aos-delay="700">
-                    <div class="main-content py-4 px-4 shadow">
+                    <div class="main-content py-4 px-4 shadow" id="main-content">
                         <div id="content-sejarah" class="main-content">
                             <div class="h3 mb-4" style="font-weight: 600;">Sejarah</div>
                             <p class="text-justify">
@@ -186,34 +199,338 @@
                                 Massa id ut molestie non tortor purus duis placerat facilisis. Ut.
                             </p>
                         </div>
-                        <div id="content-faq" class="main-content d-none">
-                            <div class="h3 mb-4" style="font-weight: 600;">FAQ</div>
-                            <p>
-                                Soon <br>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam consequuntur quis
-                                dolorum culpa ullam. Ad aspernatur quasi nostrum maxime. Repellendus labore quos aliquam
-                                fuga cum, non assumenda porro veritatis velit.
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 mb-3 faq-1" onclick="toggleFAQ(1)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">Apa itu Reboisasi ?</div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-1" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-1" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-1">
+                            <p class="mb-0 text-justify">
+                                Reboisasi ialah platform crowdsourcing penggalangan dana online untuk konservasi hutan
+                                dan lingkungan
                             </p>
                         </div>
                     </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(2)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa saja kegiatan Reboisasi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-2" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-2" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-2">
+                            <p class="mb-0 text-justify">
+                                Kegiatan yang dilakukan Reboisasi dimulai dari jelajah lingkungan melihat kerusakan
+                                lingkungan di sekitar kita, kemudian kita mencari komunitas dan “petani” di sekitar
+                                wilayah tersebut untuk sama-sama membuat agenda penanaman, bukan hanya itu kita juga
+                                membuka relawan di setiap kota untuk bersama-sama untuk mewujudkan penanaman
+                                se-Indonesia
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-3" onclick="toggleFAQ(3)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Bagaimana Cara Kerja Reboisasi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-3" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-3" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-3">
+                            <p class="mb-0 text-justify">
+                            <ul class="pl-4">
+                                <li><b>Kampanye</b>
+                                    <div class="mb-2 text-justify">
+                                        Kampanye di platform kami untuk penghijauan dan penyelamatan satwa. Pengguna
+                                        dapat membuat dan mempromosikan kampanye mereka untuk mengumpulkan donasi.
+                                    </div>
+                                </li>
+                                <li><b>Donasi</b>
+                                    <div class="mb-2 text-justify">
+                                        Donasi untuk kampanye berdasarkan berapa banyak pohon yang akan pengguna tanam.
+                                        Ini mempengaruhi berapa banyak pengurangan emisi karbon dari donasi pengguna.
+                                    </div>
+                                </li>
+                                <li><b>Penanaman</b>
+                                    <div class="mb-2 text-justify">
+                                        Kami mengumpulkan orang di seluruh dunia yang memiliki ketertarikan untuk
+                                        menanam bersama. Semua orang dapat ikut dan berkontribusi di semua kampanye.
+                                        Saat orang datang langsung ke hutan, dia jadi saksi kabar hutan.
+                                    </div>
+                                </li>
+                                <li><b>Pemantauan</b>
+                                    <div class="mb-2 text-justify">
+                                        Bukan hanya donasi dan penanaman, tapi juga pemantauan jumlah pohon yang masih
+                                        hidup, bagaimana kondisinya dan menghitung berapa pengurangan emisi yang
+                                        dihasilkan.
+                                    </div>
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(4)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa Tujuan dari Reboisasi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-4" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-4" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-4">
+                            <p class="mb-0 text-justify">
+                            <ol class="pl-4">
+                                <li>Mengajak masyarakat Indonesia dan Dunia untuk berperan aktif dalam pelestarian
+                                    Lingkungan Hidup di Indonesia. </li>
+                                <li>Menjadi pioner teknologi pelestarian hutan di Indonesia. </li>
+                                <li>Menjadi penghubung dan penggerak pelestarian Lingkungan Hidup di Indonesia.</li>
+                                <li>Menanam pohon sejumlah penduduk Indonesia sampai batas waktu yang tidak ditentukan.
+                                </li>
+                                <li>
+                                    Membantu peningkatan ilmu pengetahuan yang berhubungan dengan pelestarian
+                                    Lingkungan.
+                                </li>
+                                <li>
+                                    Menjaga hutan Indonesia agar tetap lestari.
+                                </li>
+                                <li>
+                                    Menjadi lembaga independen yang membantu mewujudkan kelestarian Lingkungan
+                                    Indonesia terutama pada sektor kehutanan.
+                                </li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(5)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa itu Relawan Reboisasi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-5" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-5" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-5">
+                            <p class="mb-0 text-justify">
+                                Relawan Reboisasi merupakan para individu yang mendaftarkan diri ke lembaga
+                                Reboisasi secara online melalui website untuk dapat berkontribusi dalam pelestarian
+                                lingkungan yang dilakukan oleh Reboisasi. Kegiatan tersebut mengacu pada kegiatan
+                                yang dilakukan oleh Tim Pusat dan Relawan Reboisasi Daerah.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(6)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa itu Relawan Reboisasi Daerah ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-6" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-6" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-6">
+                            <p class="mb-0 text-justify">
+                                Relawan reboisasi Daerah merupakan bagian dari kelembagaan yang terdiri dari para
+                                individu dengan visi dan misi yang sama dalam pelestarian lingkungan di daerah. Relawan
+                                Reboisasi Daerah berstatus tidak terikat, tetapi bertanggung jawab.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(7)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa itu #RawatBumi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-7" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-7" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-7">
+                            <p class="mb-0 text-justify">
+                                “RawatBumi” adalah kampanye alam penanaman pohon dan bersih sampah dalam rangka
+                                peringatan Hari Bumi yang akan diselenggarakan pada tanggal 21 April 2021, yang
+                                dilaksanakan secara gotong royong pada area konservasi di 100 daerah. Kampanye ini
+                                diinisasi oleh LindungiHutan bekerjasama dengan relawan, masyarakat, pemerintah dan
+                                perusahaan setempat dengan tujuan membangun kepedulian terhadap pelestarian alam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(8)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Apa Tujuan dan Manfaat dari kegiatan #RawatBumi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-8" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-8" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-8">
+                            <p class="mb-0 text-justify">
+                                Kegiatan “RawatBumi” bertujuan untuk menjadi momentum bukti bakti terhadap bumi yang
+                                kita tempati, dengan cara membangun harapan, mewujudkan kepedulian dan menampung
+                                kontribusi nyata dari seluruh elemen masyarakat sehingga terwujud lingkungan yang lebih
+                                terawat dan bumi yang lebih nyaman untuk ditempati. <br>
+
+                                Dari kegiatan “RawatBumi” ini, diharapkan dapat terjalin hubungan baik dan sinergi antar
+                                elemen masyarakat bahwa isu lingkungan merupakan masalah dan tanggung jawab bersama
+                                semua pihak, dan butuh kepedulian serta gotong royong seluruh elemen untuk
+                                menyelesaikannya.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="content-faq" class="content-faq py-3 px-1 my-3 faq-2" onclick="toggleFAQ(9)">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="h5 mb-0 text-hijau" style="font-weight: 400;">
+                                        Bagaimana cara saya berkontribusi untuk kegiatan #RawatBumi ?
+                                    </div>
+                                </div>
+                                <div class="col-2 text-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-down-fill text-hijau" id="down-9" viewBox=" 0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-caret-up-fill text-hijau d-none" id="up-9" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 mt-4 mb-1" id="content-faq-9">
+                            <p class="mb-0 text-justify">
+                                Kamu bisa menjadi pelopor dengan ikut mendaftarkan daerahmu sebagai penyelenggara dengan
+                                cara hubungi kontak Reboisasi, bisa juga dengan berdonasi untuk daerah setempat,
+                                atau membeli product bundling yang sekaligus berdonasi atau dengan usaha yang dipunyai
+                                bisa mensponsori acara. Dan pada hari H, kamu dapat ikut hadir dan bertemu dengan
+                                orang-orang lain yang peduli dengan keberlangsungan bumi ini.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -223,7 +540,7 @@
         <div class="container poppins">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="h5 text-orange mb-3" style="font-weight: bold;">LindungiHutan</div>
+                    <div class="h5 text-orange mb-3" style="font-weight: bold;">Reboisasi</div>
                     <p class="text-light text-justify" style="font-weight: 300;">
                         Website Penggalangan Dana Online untuk Konservasi Hutan dan Lingkungan. <br>
                         Melindungi, menjaga, merawat, dan melestarikan ekosistem hutan itu berat, tidak bisa kami
@@ -231,17 +548,17 @@
                     </p>
                 </div>
                 <div class="col-md-1"></div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="700">
                     <div class="h5 text-orange mb-3" style="font-weight: bold;">Menu Utama</div>
-                    <ul style="list-style-type: none;" class="text-light pl-3">
+                    <ul style="list-style-type: none;" class="text-light pl-1">
                         <li><a href="kampanye.html">Kampanye</a></li>
                         <li><a href="partner.html">Partner</a></li>
                         <li><a href="tentang.html">Tentang Kami</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
                     <div class="h5 text-orange mb-3" style="font-weight: bold;">Kontak Kami</div>
-                    <div class=" text-light pl-3">
+                    <div class=" text-light pl-1">
                         <table>
                             <tr>
                                 <td class="align-top">
@@ -265,15 +582,6 @@
                                         Mangurai,Kota Jambi, Jambi</a>
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td></td>
-                                <td>
-                                    <iframe class="border" style="border-radius: .4em; width: 100%;"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.1846280826994!2d103.57505511541214!3d-1.6396872365778339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2587c54139a8f9%3A0x18e96bac3d1ce7b1!2sJambi%2C%20Mayang%20Mangurai%2C%20Kota%20Baru%2C%20Jambi%20City%2C%20Jambi%2036361!5e0!3m2!1sen!2sid!4v1608459773597!5m2!1sen!2sid"
-                                        width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
-                                        aria-hidden="false" tabindex="0"></iframe>
-                                </td>
-                            </tr> -->
                         </table>
 
                     </div>
@@ -286,7 +594,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Optional JavaScript -->
@@ -313,7 +620,9 @@
             $('#content-sejarah').removeClass('d-none');
             $('#content-visi-misi').addClass('d-none');
             $('#content-program').addClass('d-none');
-            $('#content-faq').addClass('d-none');
+            $('.content-faq').addClass('d-none');
+            $('#main-content').removeClass('d-none');
+
         });
 
         $('#visi-misi').on('click', function () {
@@ -325,7 +634,9 @@
             $('#content-sejarah').addClass('d-none');
             $('#content-visi-misi').removeClass('d-none');
             $('#content-program').addClass('d-none');
-            $('#content-faq').addClass('d-none');
+            $('.content-faq').addClass('d-none');
+            $('#main-content').removeClass('d-none');
+
         });
 
         $('#program').on('click', function () {
@@ -337,7 +648,9 @@
             $('#content-sejarah').addClass('d-none');
             $('#content-visi-misi').addClass('d-none');
             $('#content-program').removeClass('d-none');
-            $('#content-faq').addClass('d-none');
+            $('.content-faq').addClass('d-none');
+            $('#main-content').removeClass('d-none');
+
         });
 
         $('#faq').on('click', function () {
@@ -349,14 +662,17 @@
             $('#content-sejarah').addClass('d-none');
             $('#content-visi-misi').addClass('d-none');
             $('#content-program').addClass('d-none');
-            $('#content-faq').removeClass('d-none');
+            $('.content-faq').removeClass('d-none');
+            $('#main-content').addClass('d-none');
+            $(".content-faq").show();
+
         });
         console.log(sessionStorage.getItem("email"));
 
         $("#more-learn").click(function () {
             $('html, body').animate({
                 scrollTop: $(".tentang").offset().top
-            }, 2000);
+            }, 1000);
         });
 
         console.log(sessionStorage.getItem("email"));
@@ -374,6 +690,17 @@
         $('#logout').on('click', function () {
             sessionStorage.clear();
         });
+
+        $("#content-faq-1").hide();
+        $("#content-faq-2").hide();
+        $("#content-faq-3").hide();
+        $("#content-faq-4").hide();
+        $("#content-faq-5").hide();
+        $("#content-faq-6").hide();
+        $("#content-faq-7").hide();
+        $("#content-faq-8").hide();
+        $("#content-faq-9").hide();
+        $(".content-faq").hide();
     </script>
 </body>
 
