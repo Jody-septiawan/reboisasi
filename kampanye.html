@@ -21,6 +21,8 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
         type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "ce19c03d-64a7-4add-99b5-d4e26cbff3b4"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
@@ -43,7 +45,7 @@
                         <a class="nav-link mx-3" href="kampanye.html">Kampanye</span></a>
                     </li>
                     <li class="nav-item active mt-1">
-                        <a class="nav-link mx-3" href="#">Partner</span></a>
+                        <a class="nav-link mx-3" href="partner.html">Partner</span></a>
                     </li>
                     <li class="nav-item active mt-1">
                         <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
@@ -63,7 +65,7 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" id="logout" href="/">Logout</a>
+                                <a class="dropdown-item" id="logout" href="kampanye.html">Logout</a>
                             </div>
                         </div>
                     </li>
@@ -76,7 +78,7 @@
         <div class="text-hero h1 text-light poppins text-center">
             <div data-aos="flip-up" data-aos-delay="300">
                 Suarakan suaramu <br>
-                Nyatakan aksi mu untuk LindungiHutan
+                Nyatakan aksi mu untuk Lindungi Hutan
             </div><br>
             <button type="button" id="create-kampanye" class="btn btn-mulai-aksi px-5 mt-3" data-toggle="modal"
                 data-target="#buat-kampanye">
@@ -114,7 +116,8 @@
                                         (Reducing Emissions from Deforestation and Forest Degradation Plus), terutama
                                         dalam pengendalian perubahan iklim global.
                                     </p>
-                                    <button>Donasi</button>
+                                    <button class="btn donasikan" data-toggle="modal"
+                                        data-target="#donasi-peduli">Donasi</button>
                                 </div>
                                 <div class="col-5">
                                     <img src="asset/img/img-1.png" class="img-fluid" alt="">
@@ -159,7 +162,8 @@
                                         bibit tanaman hutan dengan mutu yang baik..
 
                                     </p>
-                                    <button>Donasi</button>
+                                    <button class="btn donasikan" data-toggle="modal"
+                                        data-target="#donasi-bibit">Donasi</button>
                                 </div>
                                 <div class="col-5">
                                     <img src="asset/img/img-2.png" class="img-fluid" alt="">
@@ -205,7 +209,8 @@
                                         (Reducing Emissions from Deforestation and Forest Degradation Plus), terutama
                                         dalam pengendalian perubahan iklim global.
                                     </p>
-                                    <button>Donasi</button>
+                                    <button class="btn donasikan" data-toggle="modal"
+                                        data-target="#donasi-pohon">Donasi</button>
                                 </div>
                                 <div class="col-5">
                                     <img src="asset/img/img-3.png" class="img-fluid" alt="">
@@ -263,8 +268,8 @@
                                 <td class="align-top">
                                     <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
                                 </td>
-                                <td class="pl-3"><a target="_blank" href="mailto:info@lindungihutan.com"
-                                        class="text-light">info@lindungihutan.com</a></td>
+                                <td class="pl-3"><a target="_blank" href="mailto:info@reboisasi.id"
+                                        class="text-light">info@reboisasi.id</a></td>
                             </tr>
                             <tr>
                                 <td class="align-top"><i class="fa fa-home fa-1x" aria-hidden="true"></i>
@@ -289,17 +294,15 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal create-->
     <div id="popup-modal">
         <div class="modal fade kampanye-modal poppins" id="buat-kampanye" tabindex="-1" role="dialog"
             aria-labelledby="modelTitleId" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header border-0 pb-0">
-                        <!-- <h5 class="modal-title">Modal title</h5> -->
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-times-circle-o text-hijau-2" aria-hidden="true"></i>
-                            <!-- <span aria-hidden="true">&times;</span> -->
                         </button>
                     </div>
                     <form action="kampanye.html">
@@ -354,6 +357,162 @@
         </div>
     </div>
 
+    <!-- Modal donasi -->
+    <div class="modal fade" id="donasi-peduli" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog donasi-modal modal-dialog-centered" role="document">
+            <div class="modal-content bg-hijau-2">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" style="color: white !important;" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form action="kampanye.html">
+
+                    <div class="modal-body">
+                        <div class="text-light h3 text-center">
+                            DONASI "<b>PEDULI HUTAN</b>"
+                        </div>
+                        <div class="bg-light mb-3" style="padding-top: 1px; padding-bottom: 1px;">
+                        </div>
+                        <div class="form-input">
+                            <input type="number" class="form-control enter" name="" id="nominal"
+                                aria-describedby="helpId" placeholder="Jumlah Donasi" required>
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+
+                            <select class="form-control" name="" id="bank" required>
+                                <option>Pilih Bank</option>
+                                <option>BCA</option>
+                                <option>BRI</option>
+                                <option>BNI</option>
+                                <option>MANDIRI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                            <textarea placeholder="Pesan untuk Reboisasi" class="form-control" name="" id="pesan"
+                                rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 text-center pb-4">
+                        <button type="submit" id="donasi-peduli"
+                            class="btn btn-donasikan mx-auto px-4 py-1">Donasikan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal donasi -->
+    <div class="modal fade" id="donasi-bibit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog donasi-modal modal-dialog-centered" role="document">
+            <div class="modal-content bg-hijau-2">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" style="color: white !important;" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form action="kampanye.html">
+
+                    <div class="modal-body">
+                        <div class="text-light h3 text-center">
+                            DONASI "<b>BIBIT TANAMAN</b>"
+                        </div>
+                        <div class="bg-light mb-3" style="padding-top: 1px; padding-bottom: 1px;">
+                        </div>
+                        <div class="form-input">
+                            <input type="number" class="form-control enter" name="" id="nominal-bibit"
+                                aria-describedby="helpId" placeholder="Jumlah Donasi" required>
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+
+                            <select class="form-control" name="" id="bank-bibit" required>
+                                <option>Pilih Bank</option>
+                                <option>BCA</option>
+                                <option>BRI</option>
+                                <option>BNI</option>
+                                <option>MANDIRI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                            <textarea placeholder="Pesan untuk Reboisasi" class="form-control" name="" id="pesan-bibit"
+                                rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 text-center pb-4">
+                        <button type="submit" id="donasi-bibit"
+                            class="btn btn-donasikan mx-auto px-4 py-1">Donasikan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal donasi -->
+    <div class="modal fade" id="donasi-pohon" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog donasi-modal modal-dialog-centered" role="document">
+            <div class="modal-content bg-hijau-2">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times" style="color: white !important;" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form action="kampanye.html">
+
+                    <div class="modal-body">
+                        <div class="text-light h3 text-center">
+                            DONASI "<b>POHON UNTUK KOTA</b>"
+                        </div>
+                        <div class="bg-light mb-3" style="padding-top: 1px; padding-bottom: 1px;">
+                        </div>
+                        <div class="form-input">
+                            <input type="number" class="form-control enter" name="" id="nominal-pohon"
+                                aria-describedby="helpId" placeholder="Jumlah Donasi" required>
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-university" aria-hidden="true"></i>
+
+                            <select class="form-control" name="" id="bank-pohon" required>
+                                <option>Pilih Bank</option>
+                                <option>BCA</option>
+                                <option>BRI</option>
+                                <option>BNI</option>
+                                <option>MANDIRI</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                            <textarea placeholder="Pesan untuk Reboisasi" class="form-control" name="" id="pesan-pohon"
+                                rows="6" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 text-center pb-4">
+                        <button type="submit" id="donasi-pohon"
+                            class="btn btn-donasikan mx-auto px-4 py-1">Donasikan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#exampleModal').on('show.bs.modal', event => {
+            var button = $(event.relatedTarget);
+            var modal = $(this);
+            // Use above variables to manipulate the DOM
+
+        });
+    </script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -368,6 +527,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        sessionStorage.setItem("to-kampanye", 0);
 
         $('.custom-file-input').on('change', function () {
             let filename = $(this).val().split('\\').pop();
@@ -426,6 +586,40 @@
         $("#imgInp").change(function () {
             readURL(this);
         });
+
+        $('#donasi-peduli').on('click', function () {
+
+            nominal = $('#nominal').val();
+            bank = $('#bank').val();
+            pesan = $('#pesan').val();
+
+            if (nominal !== "" & bank !== "" & pesan !== "") {
+                sessionStorage.setItem("donasi-peduli", 1);
+            }
+        });
+
+        $('#donasi-bibit').on('click', function () {
+
+            nominal = $('#nominal-bibit').val();
+            bank = $('#bank-bibit').val();
+            pesan = $('#pesan-bibit').val();
+
+            if (nominal !== "" & bank !== "" & pesan !== "") {
+                sessionStorage.setItem("donasi-bibit", 1);
+            }
+        });
+
+        $('#donasi-pohon').on('click', function () {
+
+            nominal = $('#nominal-pohon').val();
+            bank = $('#bank-pohon').val();
+            pesan = $('#pesan-pohon').val();
+
+            if (nominal !== "" & bank !== "" & pesan !== "") {
+                sessionStorage.setItem("donasi-pohon", 1);
+            }
+        });
+
         $('#btn-sebar').on('click', function () {
 
             nama = $('#nama').val();
@@ -434,29 +628,83 @@
             harga = $('#harga').val();
             imgInp = $('#imgInp').val();
 
-            //console.log(nama)
-            //console.log(penyelenggara)
-            //console.log(cerita)
-            //console.log(harga)
-            //console.log(imgInp)
-
             if (nama !== "" & penyelenggara !== "" & cerita !== "" & harga !== "" & imgInp !== "") {
                 sessionStorage.setItem("kampanye", 1);
             }
         });
 
+        $('.enter').keypress(function (e) {
+            var key = e.which;
+            if (key == 13)  // the enter key code
+            {
+                nama = $('#nama').val();
+                penyelenggara = $('#penyelenggara').val();
+                cerita = $('#cerita').val();
+                harga = $('#harga').val();
+                imgInp = $('#imgInp').val();
+
+                if (nama !== "" & penyelenggara !== "" & cerita !== "" & harga !== "" & imgInp !== "") {
+                    sessionStorage.setItem("kampanye", 1);
+                }
+            }
+        });
+
         kampanye = sessionStorage.getItem('kampanye');
+        console.log("kampanye " + kampanye);
         if (kampanye == 1) {
             Swal.fire({
                 icon: 'success',
                 title: 'berhasil membuat Kampanye',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2000
             })
             sessionStorage.setItem("kampanye", 0);
         }
 
+        peduli = sessionStorage.getItem('donasi-peduli');
+        console.log("peduli " + peduli);
+        if (peduli == 1) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Donasi Peduli Hutan Berhasil',
+                showConfirmButton: false,
+                timer: 2000
+            })
+            sessionStorage.setItem("donasi-peduli", 0);
+        }
+
+        bibit = sessionStorage.getItem('donasi-bibit');
+        console.log("bibit " + bibit);
+        if (bibit == 1) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Donasi Bibit Tanaman Berhasil',
+                showConfirmButton: false,
+                timer: 2000
+            })
+            sessionStorage.setItem("donasi-bibit", 0);
+        }
+
+        pohon = sessionStorage.getItem('donasi-pohon');
+        console.log("pohon " + pohon);
+        if (pohon == 1) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Donasi Pohon untuk Kota Berhasil',
+                showConfirmButton: false,
+                timer: 2000
+            })
+            sessionStorage.setItem("donasi-pohon", 0);
+        }
+
         $('#create-kampanye').on('click', function () {
+            if (!sessionStorage.getItem("email")) {
+                sessionStorage.setItem("kampanye-login", 1);
+                window.location.href = "login.html";
+            }
+        });
+
+        $('.donasikan').on('click', function () {
             if (!sessionStorage.getItem("email")) {
                 sessionStorage.setItem("kampanye-login", 1);
                 window.location.href = "login.html";

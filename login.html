@@ -46,7 +46,7 @@
                         <a class="nav-link mx-3" href="kampanye.html">Kampanye</span></a>
                     </li>
                     <li class="nav-item active mt-1">
-                        <a class="nav-link mx-3" href="#">Partner</span></a>
+                        <a class="nav-link mx-3" href="partner.html">Partner</span></a>
                     </li>
                     <li class="nav-item active mt-1">
                         <a class="nav-link mx-3" href="tentang.html">Tentang Kami</span></a>
@@ -201,6 +201,7 @@
             $('.kartu-login').addClass('d-none');
         });
 
+
         $('#masuk').on('click', function () {
             email = $('#email-login').val()
             password = $('#password-login').val()
@@ -212,8 +213,16 @@
                     sessionStorage.setItem("email", email);
                     // Retrieve
                     console.log(sessionStorage.getItem("email"));
+                    to_kampanye = sessionStorage.getItem('to-kampanye');
+                    console.log("to kampanye " + to_kampanye);
 
-                    window.location.href = "/";
+                    if (to_kampanye == 1) {
+                        window.location.href = "kampanye.html";
+                    } else {
+                        window.location.href = "/";
+
+                    }
+
                 } else {
                     console.log("Sorry, your browser does not support Web Storage...");
                 }
@@ -242,7 +251,16 @@
                         // Retrieve
                         console.log(sessionStorage.getItem("email"));
 
-                        window.location.href = "/";
+                        to_kampanye = sessionStorage.getItem('to-kampanye');
+                        console.log("to kampanye " + to_kampanye);
+
+                        if (to_kampanye == 1) {
+                            window.location.href = "kampanye.html";
+                        } else {
+                            window.location.href = "/";
+
+                        }
+
                     } else {
                         console.log("Sorry, your browser does not support Web Storage...");
                     }
@@ -274,15 +292,18 @@
         });
 
         kampanye_login = sessionStorage.getItem('kampanye-login');
-        console.log(kampanye_login);
         if (kampanye_login == 1) {
             Swal.fire({
                 icon: 'warning',
                 html: "Silahkan login terlebih dahulu",
                 showConfirmButton: false,
-                timer: 2000
+                timer: 1300
             })
             sessionStorage.setItem("kampanye-login", 0);
+            sessionStorage.setItem("to-kampanye", 1);
+            to_kampanye = sessionStorage.getItem('to-kampanye');
+            console.log("to kampanye " + to_kampanye);
+
         }
 
     </script>

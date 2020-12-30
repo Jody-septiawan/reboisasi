@@ -85,6 +85,20 @@ html, body {
     width: 100%;
   }
 
+  .hero-partner{ 
+    height: 100%;
+    background-image: url('../img/background-6.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+
+#logout:hover{
+color: white;
+}
+
 .btn-mulai-aksi{
     color: aliceblue;
     border: 3px solid white;
@@ -311,7 +325,7 @@ html, body {
     padding: 3px 30px;
 }
 .kampanye button:focus{
-    border: none !important;
+    /* border: none !important; */
 }
 
 
@@ -418,4 +432,157 @@ html, body {
     transition: .6s;
     box-shadow: 0px 0px 20px #026e3a6e;
 
+}
+
+/* partner */
+
+.card-header{
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.card-footer{
+    border-radius: 0 0 10px 10px !important;
+}
+
+.partner button{
+    border: 2px solid white;
+    background-color: #00000000;
+    color: white;
+    border-radius: 2em;
+    transition: .8s;
+}
+
+.partner button:hover{
+    background-color: #1d9c1db9;
+    transition: .8s;
+    color: white;
+
+}
+
+
+.donasi-modal .form-input input{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   margin: 10px 0;
+   border: 3px solid white;
+}
+
+.donasi-modal .form-input input:focus{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+   border: 3px solid white;
+
+}
+
+.donasi-modal .form-input input::placeholder {
+   color: white;
+
+}
+
+.donasi-modal .form-input{
+    position: relative;
+}
+
+.donasi-modal .form-input i{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    padding: 9px 8px;
+    color: white;
+}
+
+/* select */
+
+.donasi-modal .form-group select{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   margin: 10px 0;
+   border: 3px solid white;
+}
+
+.donasi-modal .form-group select:focus{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+   border: 3px solid white;
+
+}
+
+.donasi-modal .form-group select:active{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+}
+
+.donasi-modal .form-group select::placeholder {
+   color: white;
+
+}
+
+.donasi-modal .form-group{
+    position: relative;
+}
+
+.donasi-modal .form-group i{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    padding: 9px 8px;
+    color: white;
+}
+
+/* textarea */
+
+.donasi-modal .form-group textarea{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   margin: 10px 0;
+   border: 3px solid white;
+
+}
+
+.donasi-modal .form-group textarea:focus{
+    padding-left: 40px;
+   background-color: #034827;
+   color: white;
+   border: none;
+   border: 3px solid white;
+
+}
+
+.donasi-modal .form-group textarea::placeholder {
+   color: white;
+
+}
+
+.donasi-modal .form-group{
+    position: relative;
+}
+
+.donasi-modal .form-group i{
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    padding: 9px 8px;
+    color: white;
+}
+
+/* btn-donasikan */
+.btn-donasikan{
+    border: 2px solid white;
+    border-radius: 2em;
+    color: white;
+}
+.btn-donasikan:hover{
+    border: 2px solid white;
+    border-radius: 2em;
+    color: white;
+    background-color: #026E3A;
 }
